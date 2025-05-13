@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Restaurante Sabor da Terra</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f6f0;
+      color: #2e3d2f;
+    }
+
+    header {
+      background-color: #3e4e3c;
+      color: #fff;
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #2e3d2f;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      padding: 12px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      border-bottom: 2px solid #c8bfae;
+      padding-bottom: 10px;
+      margin-bottom: 30px;
+    }
+
+    .menu-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .menu-item img {
+      width: 100%;
+      max-width: 350px;
+      border-radius: 10px;
+    }
+
+    .menu-item h3 {
+      margin: 15px 0 5px;
+    }
+
+    .menu-item p {
+      margin: 0 0 5px;
+      text-align: center;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+
+    form button {
+      background-color: #3e4e3c;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #2e3d2f;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .social-icons a {
+      margin: 0 10px;
+      color: white;
+      font-size: 24px;
+      text-decoration: none;
+    }
+
+    /* Responsivo para celulares */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 26px;
+      }
+
+      header p {
+        font-size: 16px;
+      }
+
+      nav {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+      }
+
+      .menu-item img {
+        max-width: 90%;
+      }
+
+      form button {
+        width: 100%;
+      }
+
+      .social-icons a {
+        font-size: 30px;
+      }
+    }
+  </style>
+
+  <!-- Ícones das redes sociais -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<header>
+  <h1>Restaurante Sabor da Terra</h1>
+  <p>Sabores que acolhem e lembram o campo</p>
+</header>
+
+<nav>
+  <a href="#menu">Cardápio</a>
+  <a href="#contato">Contato</a>
+</nav>
+
+<section id="menu">
+  <h2>Nosso Cardápio</h2>
+
+  <div class="menu-item">
+    <img src="feijoada.jpg" alt="Feijoada">
+    <h3>Feijoada Tradicional</h3>
+    <p>Feijoada com acompanhamentos típicos: arroz, couve e farofa.</p>
+    <strong>R$ 35,00</strong>
+  </div>
+
+  <div class="menu-item">
+    <img src="frango-grelhado.jpg" alt="Frango Grelhado">
+    <h3>Frango Grelhado</h3>
+    <p>Peito de frango com legumes salteados e arroz integral.</p>
+    <strong>R$ 28,00</strong>
+  </div>
+
+  <div class="menu-item">
+    <img src="picanha.jpg" alt="Picanha">
+    <h3>Picanha</h3>
+    <p>Picanha e arroz integral.</p>
+    <strong>R$ 48,00</strong>
+  </div>
+
+  <!-- Adicione mais pratos aqui -->
+</section>
+
+<section id="contato">
+  <h2>Contato e Agendamento</h2>
+  <p>📍 Rua das Árvores, 456 - Bairro Verde</p>
+  <p>📞 (11) 91234-5678</p>
+  <p>✉️ contato@sabordaterra.com</p>
+
+  <h3>Agende sua visita:</h3>
+  <form onsubmit="enviarFormulario(event)">
+    <input type="text" placeholder="Seu nome" required />
+    <input type="email" placeholder="Seu email" required />
+    <input type="date" required />
+    <textarea placeholder="Mensagem ou pedido especial" rows="4"></textarea>
+    <button type="submit">Enviar</button>
+  </form>
+</section>
+
+<footer>
+  <p>&copy; 2025 Restaurante Sabor da Terra</p>
+  <div class="social-icons">
+    <a href="https://www.instagram.com/seurestaurante" target="_blank" title="Instagram">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="https://wa.me/5511999999999" target="_blank" title="WhatsApp">
+      <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="https://www.facebook.com/seurestaurante" target="_blank" title="Facebook">
+      <i class="fab fa-facebook"></i>
+    </a>
+  </div>
+</footer>
+
+<script>
+  function enviarFormulario(event) {
+    event.preventDefault();
+    alert("Agendamento enviado com sucesso!");
+    event.target.reset();
+  }
+</script>
+
+</body>
+</html>
